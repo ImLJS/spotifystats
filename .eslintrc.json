@@ -7,6 +7,7 @@
   ],
   "plugins": ["simple-import-sort"],
   "rules": {
+    "import/extensions": "off",
     "simple-import-sort/exports": "error",
     "simple-import-sort/imports": "error",
     "unicorn/no-array-callback-reference": "off",
@@ -26,12 +27,12 @@
       }
     ]
   },
-  "overrides": [
-    {
-      "files": ["*.js"],
-      "rules": {
-        "unicorn/prefer-module": "off"
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "map": [["@", "./src"]],
+        "extensions": [".js", ".jsx"]
       }
     }
-  ]
+  }
 }

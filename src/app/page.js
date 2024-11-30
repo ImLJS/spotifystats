@@ -1,101 +1,90 @@
-import Image from 'next/image';
+import { SignInButton } from '@/components/sign-in-button';
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="grid min-h-screen grid-rows-[20px_1fr_20px] items-center justify-items-center gap-16 p-8 pb-20 font-[family-name:var(--font-geist-sans)] sm:p-20">
-      <main className="row-start-2 flex flex-col items-center gap-8 sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-center font-[family-name:var(--font-geist-mono)] text-sm sm:text-left">
-          <li className="mb-2">
-            Get started by editing{' '}
-            <code className="rounded bg-black/[.05] px-1 py-0.5 font-semibold dark:bg-white/[.06]">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="flex min-h-screen flex-col items-center justify-center bg-black p-4 text-white">
+      <div className="w-full max-w-md text-center">
+        <h1 className="mb-6 text-4xl font-bold text-green-500">
+          Spotify Insights
+        </h1>
 
-        <div className="flex flex-col items-center gap-4 sm:flex-row">
-          <a
-            className="flex h-10 items-center justify-center gap-2 rounded-full border border-solid border-transparent bg-foreground px-4 text-sm text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] sm:h-12 sm:px-5 sm:text-base"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+        <div className="mb-8">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 400 300"
+            className="mx-auto mb-6 rounded-lg shadow-lg"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="flex h-10 items-center justify-center rounded-full border border-solid border-black/[.08] px-4 text-sm transition-colors hover:border-transparent hover:bg-[#f2f2f2] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] sm:h-12 sm:min-w-44 sm:px-5 sm:text-base"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 400 300"
+              className="mx-auto mb-6 rounded-lg shadow-lg"
+            >
+              {/* Background */}
+              <rect width="400" height="300" fill="#1DB954" />
+
+              {/* Sound Waves */}
+              <g transform="translate(200, 150)">
+                {/* Center Circle */}
+                <circle cx="0" cy="0" r="50" fill="white" />
+
+                {/* Sound Wave Arcs */}
+                <g opacity="0.6">
+                  <path
+                    d="M-100,0 Q-50,-50 0,0 T100,0"
+                    stroke="white"
+                    strokeWidth="4"
+                    fill="none"
+                    strokeDasharray="10,10"
+                  />
+                  <path
+                    d="M-150,0 Q-100,-75 0,0 T150,0"
+                    stroke="white"
+                    strokeWidth="3"
+                    fill="none"
+                    strokeDasharray="15,15"
+                    opacity="0.7"
+                  />
+                  <path
+                    d="M-200,0 Q-150,-100 0,0 T200,0"
+                    stroke="white"
+                    strokeWidth="2"
+                    fill="none"
+                    strokeDasharray="20,20"
+                    opacity="0.5"
+                  />
+                </g>
+
+                {/* Music Note */}
+                <path
+                  d="M-20,-30 Q0,-40 20,-30 L20,30 Q10,35 0,30 Q-10,25 -20,30 Z"
+                  fill="black"
+                  opacity="0.7"
+                />
+              </g>
+
+              {/* Decorative Circles */}
+              <circle cx="50" cy="50" r="20" fill="white" opacity="0.3" />
+              <circle cx="350" cy="250" r="15" fill="white" opacity="0.3" />
+            </svg>
+          </svg>
         </div>
-      </main>
-      <footer className="row-start-3 flex flex-wrap items-center justify-center gap-6">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+        <p className="mb-8 text-lg text-gray-300">
+          Unlock deeper insights into your music listening habits. Connect your
+          Spotify account to discover personalized statistics and trends.
+        </p>
+
+        <SignInButton />
+
+        <div className="mt-6 text-sm text-gray-400">
+          <p>By signing in, you&apos;ll get access to:</p>
+          <ul className="mt-2 list-inside list-disc space-y-1 text-left">
+            <li>Your top tracks and artists</li>
+            <li>Listening history analysis</li>
+            <li>Personalized music insights</li>
+          </ul>
+        </div>
+      </div>
     </div>
   );
 }
