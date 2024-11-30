@@ -1,38 +1,14 @@
 {
-  "extends": [
-    "next/core-web-vitals",
-    "plugin:unicorn/recommended",
-    "plugin:import/recommended",
-    "plugin:prettier/recommended"
-  ],
-  "plugins": ["simple-import-sort"],
+  "extends": ["next/core-web-vitals"],
   "rules": {
-    "import/extensions": "off",
-    "simple-import-sort/exports": "error",
-    "simple-import-sort/imports": "error",
-    "unicorn/no-array-callback-reference": "off",
-    "unicorn/no-array-for-each": "off",
-    "unicorn/no-array-reduce": "off",
-    "unicorn/prevent-abbreviations": [
+    "no-console": "warn",
+    "no-unused-vars": [
       "error",
       {
-        "allowList": {
-          "e2e": true
-        },
-        "replacements": {
-          "props": false,
-          "ref": false,
-          "params": false
-        }
+        "vars": "all",
+        "args": "after-used",
+        "ignoreRestSiblings": false
       }
     ]
-  },
-  "settings": {
-    "import/resolver": {
-      "alias": {
-        "map": [["@", "./src"]],
-        "extensions": [".js", ".jsx"]
-      }
-    }
   }
 }
