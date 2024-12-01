@@ -46,7 +46,7 @@ const options = {
       session.accessToken = token.accessToken;
       return session;
     },
-    },
+  },
   debug: process.env.NODE_ENV === 'development',
 };
 
