@@ -5,7 +5,7 @@ export function SignInButton() {
     <form
       action={async () => {
         'use server';
-        await signIn('spotify', { redirectTo: '/dashboard' });
+        await signIn('spotify', { redirectTo: '/olddashboard' });
       }}
       className="w-full"
     >
