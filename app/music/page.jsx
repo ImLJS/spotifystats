@@ -7,7 +7,6 @@ import { Separator } from '@/components/ui/separator';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 import { AlbumArtwork } from '@/components/dashboard/album-artwork';
-import { Menu } from '@/components/dashboard/menu';
 import { PodcastEmptyPlaceholder } from '@/components/dashboard/podcast-empty-placeholder';
 import { Sidebar } from '@/components/dashboard/sidebar';
 import { listenNowAlbums, madeForYouAlbums } from './data/albums';
@@ -38,7 +37,6 @@ export default function MusicPage() {
         />
       </div>
       <div className="hidden md:block">
-        <Menu />
         <div className="border-t">
           <div className="bg-background">
             <div className="grid lg:grid-cols-5">
