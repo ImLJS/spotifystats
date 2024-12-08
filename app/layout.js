@@ -1,5 +1,5 @@
 import localFont from 'next/font/local';
-import { ThemeProvider } from '@/components/ThemeProvider';
+import { ThemeProvider } from '@/components/dark-mode/ThemeProvider';
 import './globals.css';
 
 const geistSans = localFont({
