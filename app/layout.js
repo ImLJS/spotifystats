@@ -1,5 +1,4 @@
 import localFont from 'next/font/local';
-import { ThemeProvider } from '@/components/dark-mode/ThemeProvider';
 import './globals.css';
 
 const geistSans = localFont({
@@ -20,18 +19,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children}
-        </ThemeProvider>
+        {children}
       </body>
     </html>
   );
