@@ -1,6 +1,7 @@
 import localFont from 'next/font/local';
 import { ThemeProvider } from '@/components/dark-mode/ThemeProvider';
 import './globals.css';
+import Nav from '@/components/navbar/nav';
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -22,7 +23,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} mx-2 antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} mx-2 flex min-h-screen flex-col antialiased`}
       >
         <ThemeProvider
           attribute="class"
@@ -30,6 +31,7 @@ export default function RootLayout({ children }) {
           enableSystem
           disableTransitionOnChange
         >
+          <Nav />
           {children}
         </ThemeProvider>
       </body>
