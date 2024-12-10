@@ -9,6 +9,7 @@ export function HeroImage() {
         width={500}
         alt="Music"
         className="mx-auto h-auto w-full"
+        priority
       />
     </div>
   );

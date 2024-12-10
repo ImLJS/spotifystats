@@ -33,10 +33,6 @@ export function NavAuthActions({ session }) {
       <DropdownMenuContent align="end">
         <DropdownMenuLabel>My Account</DropdownMenuLabel>
         <DropdownMenuSeparator />
-        <DropdownMenuItem>{session.user?.name}</DropdownMenuItem>
-        <DropdownMenuItem onClick={SignIn} className="cursor-pointer">
-          Switch Account
-        </DropdownMenuItem>
         <DropdownMenuItem
           onClick={SignOut}
           className="cursor-pointer text-destructive focus:text-destructive"
