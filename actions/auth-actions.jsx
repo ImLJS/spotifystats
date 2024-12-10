@@ -7,5 +7,5 @@ export async function SignIn() {
 }
 
 export async function SignOut() {
-  await signOut({ callbackUrl: '/' });
+  await signOut({ redirectTo: '/' });
 }
