@@ -7,6 +7,11 @@ const nextConfig = {
         hostname: 'i.scdn.co',
         pathname: '**',
       },
+      {
+        protocol: 'https',
+        hostname: 'platform-lookaside.fbsbx.com',
+        pathname: '**',
+      },
     ],
   },
 };
