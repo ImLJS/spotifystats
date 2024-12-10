@@ -1,7 +1,8 @@
 import Image from 'next/image';
-import SpotifyButton from './auth-button';
+import { Button } from '@/components/ui/button';
+import { SignIn } from '@/actions/auth-actions';
 
-const AuthPage = () => {
+const Home = () => {
   return (
     <>
       {/* Main Content */}
@@ -19,7 +20,9 @@ const AuthPage = () => {
                 Spotify journey.
               </p>
               <div className="flex justify-center space-x-4 xl:justify-start">
-                <SpotifyButton size="lg">Sign In</SpotifyButton>
+                <Button onClick={SignIn} size="lg">
+                  Sign In
+                </Button>
               </div>
             </div>
 
@@ -40,4 +43,4 @@ const AuthPage = () => {
   );
 };
 
-export default AuthPage;
+export default Home;

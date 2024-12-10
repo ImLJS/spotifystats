@@ -1,10 +1,12 @@
-import AuthPage from '@/components/auth-page/auth-page';
+import { HeroSection } from '@/components/hero/hero-section';
 
 function HomePage() {
   return (
-    <div>
-      <AuthPage />
-    </div>
+    <main className="flex flex-grow flex-col items-center justify-center p-4">
+      <div className="w-full max-w-6xl">
+        <HeroSection />
+      </div>
+    </main>
   );
 }
 
