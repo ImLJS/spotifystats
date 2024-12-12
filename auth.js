@@ -131,9 +131,6 @@ const options = {
       return session;
     },
   },
-  pages: {
-    signIn: "/",
-  },
   debug: process.env.NODE_ENV === 'development',
 };
 
