@@ -2,9 +2,7 @@
 
 import * as React from 'react';
 import { data } from './data';
-import {
-  Command,
-} from 'lucide-react';
+import { Command } from 'lucide-react';
 
 import { NavProjects } from '@/components/dashboard/nav-projects';
 import { NavSecondary } from '@/components/dashboard/nav-secondary';
