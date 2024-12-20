@@ -1,10 +1,4 @@
-import {
-  LifeBuoy,
-  Send,
-  House,
-  Search,
-  List
-} from 'lucide-react';
+import { LifeBuoy, Send, House, Search, List } from 'lucide-react';
 
 export const data = {
   navSecondary: [
