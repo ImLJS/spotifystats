@@ -9,7 +9,6 @@ import {
 } from '@/components/ui/sidebar';
 
 export function NavProjects({ projects }) {
-
   return (
     <SidebarGroup className="group-data-[collapsible=icon]:hidden">
       <SidebarGroupLabel>General</SidebarGroupLabel>
